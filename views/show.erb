@@ -1,0 +1,12 @@
+<div class="">
+  Name: <%= @student.format_name %></br>
+  Age: <%= @student.age %>
+
+  <form class="" action="/students/<%= @student.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Throw Student Out">
+
+  </form>
+
+
+</div>
