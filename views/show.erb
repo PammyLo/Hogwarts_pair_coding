@@ -1,11 +1,16 @@
-<div class="">
-  Name: <%= @student.format_name %></br>
-  Age: <%= @student.age %>
+<div class="show">
+  Name: <%= @student.format_name %><br>
+  Age: <%= @student.age %><br>
+  House: <%= @house.name.capitalize %><br>
 
   <form class="" action="/students/<%= @student.id %>" method="post">
     <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Throw Student Out">
+    <input type="submit" value="Delete">
+  </form>
 
+  <form class="" action="/students/<%= @student.id %>" method="post">
+    <input type="hidden" name="_method" value="update">
+    <input type="submit" value="Update">
   </form>
 
 

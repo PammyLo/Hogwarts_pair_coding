@@ -25,6 +25,7 @@ end
 # show
 get '/students/:id' do
   @student = Student.find(params['id'])
+  @house = House.find(@student.house_id)
   erb( :show )
 end
 
@@ -44,4 +45,5 @@ end
 # destroy
 delete '/students/:id' do
   Student.find(params['id']).delete
+  redirect '/students'
 end

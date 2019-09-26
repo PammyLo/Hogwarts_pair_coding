@@ -1,13 +1,15 @@
 <ul>
+<div class="student-wrapper">
 
   <% @students.each do |student| %>
-
-  <li>
-      <a href="/students/<%= student.id %>">
-        <%= student.format_name %>
-      </a>
-  </li>
-
+    <li>
+      <div class="student">
+        <a href="/students/<%= student.id %>">
+          <%= student.format_name %>
+        </a>
+      </div>
+    </li>
   <% end %>
 
+</div>
 </ul>
